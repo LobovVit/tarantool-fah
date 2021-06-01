@@ -37,8 +37,11 @@ local ok, err = cartridge.cfg({
         'cartridge.roles.vshard-router',
         'cartridge.roles.metrics',
         'app.roles.custom',
+        'migrator',
     },
     cluster_cookie = 'tarantool-fah-cluster-cookie',
+    roles_reload_allowed = true,
+
 })
 
 assert(ok, tostring(err))
